@@ -225,9 +225,9 @@
                 dataHora: firebase.firestore.FieldValue.serverTimestamp()
             };
 
-        db.collection("palpites")
+       db.collection("palpites")
           .doc(emailDigitado)
-          .create(dadosPalpite)
+          .set(dadosPalpite)
           .then(()=>dadosPalpite)
         .then((dadosPalpite)=>{
             return emailjs.send('service_ib6kimu','template_90z5cgv',{
